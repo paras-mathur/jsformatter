@@ -1,3 +1,18 @@
+.middle-col {
+  min-height: 80vh; 
+  border: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="middle-col"] {
+        min-height: 20vh;
+    }
+    .buttons > .btn-warning {
+      margin-top: 2px;
+    }
+}
+
 .single-feature .icon {
 	text-align: center;
     height: 60px;
@@ -45,4 +60,9 @@ p {
 .buttons {
 	text-align: center;
 	padding-top: 30px;
+}
+
+.buttons > .btn-warning {
+  color: white;
+  margin-top: 30px;
 }

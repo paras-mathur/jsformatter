@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta name="description" content="">
+  <meta name="description" content="Javascript, HTML formatter online. Beautify your code and make it more readable and easy to maintain across projects">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
-  <title> Javascript Formatter | JS Formatter | JS Beautify  </title>
+  <title> Javascript Formatter | JS Formatter | JS Beautify </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="plugins/codemirror.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -18,22 +19,23 @@
   <script src="plugins/placeholder.js"></script>
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
-	<!--[if lte IE 9]>
+  <!--[if lte IE 9]>
 	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 	<![endif]-->
 
-	<!-- Add your site or application content here -->
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<!-- Brand -->
-		<a class="navbar-brand" href="#">JS/HTML Formatter</a>
-		<!-- Toggler/collapsibe Button -->
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+  <!-- Add your site or application content here -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">JS/HTML Formatter</a>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
 		<span class="navbar-toggler-icon"></span>
 		</button>
-		<!-- Navbar links -->
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-		<!-- <ul class="navbar-nav">
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!-- <ul class="navbar-nav">
 		  <li class="nav-item">
 		    <a class="nav-link" href="#">Link</a>
 		  </li>
@@ -44,72 +46,78 @@
 		    <a class="nav-link" href="#">Link</a>
 		  </li> 
 		</ul> -->
-		</div>
-	</nav>
-	<div class="container-fluid">
-	  <div class="row">
-	  	<div class="col-xs-12 col-sm-5 col-md-5" style="background-color: red; min-height: 80vh; padding: 0px;" id="input-col">
-	  	</div>
-	  	<div class="col-xs-12 col-sm-4 col-md-2" style="min-height: 80vh; border: 1px solid black;">
-	  		<div class="buttons">
-	  			<button type="button" class="btn btn-warning" onclick="formatJS()">Format</button>
-	  		</div>
-	  	</div>
-	  	<div class="col-xs-12 col-sm-4 col-md-5" style="background-color: red;min-height: 80vh; padding: 0px;" id="output-col">
-	  	</div>
-	  </div>
-	  
-	</div>
-	<!-- Description Area -->
-	<section class="featured-area" style="color:white; background-color: #18bc9c!important;padding-bottom: 10px">
-		<div class="container">
-			<div class="row justify-content-center height align-items-center">
-		  	<div class="col-lg-8 text-center banner">
-		  		<h2 class="text-uppercase">Javascript Beautify Online</h2>
-		  		<hr class="star-light">
-		  	</div>
-	  </div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="single-feature d-flex flex-wrap justify-content-between">
-						<div class="icon d-flex align-items-center justify-content-center">
-						<span class="fas fa-code"></span>
-						</div>
-						<div class="desc">
-							<h6 class="title text-uppercase">Stunning Visuals</h6>
-							<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="single-feature d-flex flex-wrap justify-content-between">
-						<div class="icon d-flex align-items-center justify-content-center">
-						<span class="fas fa-align-justify"></span>
-						</div>
-						<div class="desc">
-							<h6 class="title text-uppercase">Stunning Visuals</h6>
-							<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="single-feature d-flex flex-wrap justify-content-between">
-						<div class="icon d-flex align-items-center justify-content-center">
-						<span class="fas fa-user"></span>
-						</div>
-						<div class="desc">
-							<h6 class="title text-uppercase">Stunning Visuals</h6>
-							<p>Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola, body</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Footer -->
-	<footer class="container-fluid bg-dark navbar-dark text-center">
-		<p style="color: white;">Made with  <i class="fas fa-heart"></i></p>
-	</footer>
-	<script src="js/main.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify.js"></script>
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-5 col-md-5" style="min-height: 80vh; padding: 0px;" id="input-col">
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-2 middle-col">
+        <div class="buttons d-flex justify-content-center flex-column">
+          <textarea id="output-textarea" style="display: none;"></textarea>
+          <button type="button" class="btn btn-warning p-2 " onclick="formatJS()">Format</button>
+          <button type="button" class="btn btn-warning p-2" onclick="formatJS()" style="display: none;">Test</button>
+
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-5" style="min-height: 80vh; padding: 0px;" id="output-col">
+      </div>
+    </div>
+
+  </div>
+  <!-- Description Area -->
+  <section class="featured-area" style="color:white; background-color: #18bc9c!important;padding-bottom: 10px">
+    <div class="container">
+      <div class="row justify-content-center height align-items-center">
+        <div class="col-lg-8 text-center banner">
+          <h2 class="text-uppercase">Javascript Beautify Online</h2>
+          <hr class="star-light">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-code"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">HTML - JS Formatting</h6>
+              <p>Utility lets you format your HTML and Javascript code formatting as per standards.
+              It helps you follow a common formatting across multiple JS files in you project</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-align-justify"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Clean UI</h6>
+              <p>The Interface of this tool is neatly built using bootstrap</a>.
+              We are using JS-Lint and JS Beautify packages for code cleanup</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-user"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Mobile Friendly</h6>
+              <p>Tool is built upon responsive design philosophy, supports a mobile friendly interface to format javascript and html code. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="container-fluid bg-dark navbar-dark text-center">
+    <p style="color: white;">Made with <i class="fas fa-heart"></i></p>
+  </footer>
+  <script src="js/main.js"></script>
+  <script type="text/javascript" src="plugins/beautify-html.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.7.5/beautify.js"></script>
 </body>
