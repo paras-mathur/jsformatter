@@ -1,7 +1,10 @@
 var inputCodeMirror = CodeMirror($('#input-col')[0], {
   lineNumbers: true,
   placeholder: "Code goes here...",
-  mode: "htmlmixed"
+  mode: "javascript",
+  extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+  foldGutter: true,
+  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
 });
 
 var config = {
@@ -65,7 +68,20 @@ var config = {
 var outputCodeMirror = CodeMirror($('#output-col')[0], {
   lineNumbers: true,
   placeholder: "Formatted code here...",
-  mode: "htmlmixed"
+  mode: "javascript",
+  extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+  foldGutter: true,
+  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+});
+
+inputCodeMirror.on("change",function(cm,obj){
+               if( isHTML(inputCodeMirror.getValue()) ){
+                inputCodeMirror.setOption("mode", "htmlmixed");
+                outputCodeMirror.setOption("mode", "htmlmixed");
+               } else {
+                  inputCodeMirror.setOption("mode", "javascript");
+                  outputCodeMirror.setOption("mode", "javascript");
+               }         
 });
 
 function isHTML(source) {
