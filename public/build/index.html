@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Javascript, HTML formatter online. Beautify your code and make it more readable and easy to maintain across projects. Javascript beautify/pretty print, HTML formatter online">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="JavaScript Formatter, JavaScript Formatter Online,JS Formatting online, HTML formatting online, JS beautify, Javascript beautify, JavaScript pretty print, js pretty print, js format, js formatter">
+  <meta name="author" content="Digital Mowgli, Paras Mathur">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <title> Javascript Formatter | JS Formatter | JS Beautify - Modern Approach </title>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="css/stylesheet-e8536decdc.css">
+  <!-- endinject -->
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#">Javascript / HTML Formatter </a>
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!-- <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> 
+    </ul> -->
+    </div>
+  </nav>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-5 col-md-5" style="min-height: 80vh; padding: 0px;" id="input-col">
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-2 middle-col">
+        <div class="buttons d-flex justify-content-center flex-column">
+          <textarea id="output-textarea" style="display: none;"></textarea>
+          <button type="button" class="btn btn-warning p-2 " onclick="formatJS()">Format</button>
+          <button type="button" class="btn btn-warning p-2" onclick="formatJS()" style="display: none;">Test</button>
+
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4 col-md-5" style="min-height: 80vh; padding: 0px;" id="output-col">
+      </div>
+    </div>
+
+  </div>
+  <!-- Description Area -->
+  <section class="featured-area" style="color:white; background-color: #18bc9c!important;padding-bottom: 10px">
+    <div class="container">
+      <div class="row justify-content-center height align-items-center">
+        <div class="col-lg-8 text-center banner">
+          <h2 class="text-uppercase">Javascript Beautify Online</h2>
+          <hr class="star-light">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-code"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">HTML - JS Formatting</h6>
+              <p>Utility lets you format your HTML and Javascript code formatting as per standards.
+              It helps you follow a common formatting across multiple JS files in you project</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-align-justify"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Clean UI</h6>
+              <p>The Interface of this tool is neatly built using bootstrap</a>.
+              We are using JS-Lint and JS Beautify packages for code cleanup</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-user"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Mobile Friendly</h6>
+              <p>Tool is built upon responsive design philosophy, supports a mobile friendly interface to format javascript and html code.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-code"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Syntax Highlighting</h6>
+              <p>Syntax Highlighting is enabled in this code formatting tool to ease readablity</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-align-justify"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Code Folding</h6>
+              <p>This feature is added to allow user to selectively show/hide parts of code.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="single-feature d-flex flex-wrap justify-content-between">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="fas fa-user"></span>
+            </div>
+            <div class="desc">
+              <h6 class="title text-uppercase">Lightning Speed</h6>
+              <p>JS Formatter is optimised to deliver the output at super-speed. We are constantly working hard to improve the experience.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="container-fluid bg-dark navbar-dark text-center">
+    <p style="color: white;">Made with <i class="fas fa-heart"></i></p>
+  </footer>
+  
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121800615-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-121800615-1');
+  </script>
+</body>
