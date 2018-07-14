@@ -28,8 +28,10 @@ gulp.task('index', ['pack-js', 'pack-css'], function () {
 });
 
 gulp.task('pack-js', ['clean-js'], function () {	
-	return gulp.src([ 'plugins/*.js', 'plugins/mode/*.js', 'plugins/mode/fold/*.js', 'js/*.js' ])
-	return gulp.src([ 'plugins/jquery.min.js', 'plugins/bootstrap.min.js', 'plugins/codemirror.js','plugins/beautify-html.js','plugins/beautify.js','plugins/placeholder.js','plugins/popper.min.js', 'plugins/mode/*.js', 'plugins/mode/fold/*.js', 'js/*.js' ])
+	
+	return gulp.src([ 'plugins/jquery.min.js', 'plugins/popper.min.js','plugins/bootstrap.min.js', 'plugins/codemirror.js', 
+		'plugins/placeholder.js', 
+		'plugins/beautify-html.js','plugins/beautify.js','plugins/mode/*.js', 'plugins/mode/fold/*.js', 'js/*.js' ])
 		.pipe(concat('bundle.js'))
 		.pipe(minify({
             ext:{
