@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Javascript, HTML formatter online. Beautify your code and make it more readable and easy to maintain across projects. Javascript beautify/pretty print, HTML formatter online">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="JavaScript Formatter, JavaScript Formatter Online,JS Formatting online, HTML formatting online, JS beautify, Javascript beautify, JavaScript pretty print, js pretty print, js format, js formatter">
+  <meta name="author" content="Digital Mowgli, Paras Mathur">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <title> Javascript Formatter | JS Formatter | JS Beautify - Modern Approach </title>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/stylesheet-e8536decdc.css">
+  <!-- endinject -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <style type="text/css">
+    .nav-buttons {
+    	  margin: 10px;
+    	}
+	.selected {
+		font-weight:bold;
+		color: #000080;
+		text-decoration: underline;
+	}	
+
+  .highlight{
+    background-color: #FFFF33;
+  }	
+  </style>
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+     
+    <!-- Brand -->
+	<a class="navbar-brand" href="#">XML Formatter </a>   
+	
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!-- <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> 
+    </ul> -->
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="row">
+	
+    <div class="col-xs-12 col-sm-5 col-md-5" style="min-height: 80vh; padding: 0px;" id="input-col">
+    </div>
+	  
+	  <div class="col-xs-12 col-sm-4 col-md-2 d-flex justify-content-center flex-column">
+		<button type="button" class="btn btn-success" id="action-button" onclick="launch()">
+        COMPARE  
+    </button>
+	  </div>
+      
+	  <div class="col-xs-12 col-sm-5 col-md-5" style="min-height: 80vh; padding: 0px;" id="output-col">
+      </div>
+    </div>
+  <script src="diff_match_patch.js"></script>  
+	<script src="../js/bundle-7e5157a3e9.js"></script>
+	<script type="text/javascript">
+    function diff_lineMode(text1, text2) {
+        var dmp = new diff_match_patch();
+        var a = dmp.diff_linesToChars_(text1, text2);
+        var lineText1 = a.chars1;
+        var lineText2 = a.chars2;
+        var lineArray = a.lineArray;
+        var diffs = dmp.diff_main(lineText1, lineText2, false);
+        dmp.diff_charsToLines_(diffs, lineArray);
+        return diffs;
+      }
+
+    function launch(){
+      alert('working');
+        var min = Math.min(inputCodeMirror.lineCount(), outputCodeMirror.lineCount());
+        for(i=0; i<min; i++){
+          var textLine1 = inputCodeMirror.getLine(i);
+          var textLine2 = outputCodeMirror.getLine(i);
+          var result = diff_lineMode(textLine1, textLine2);
+          if(result[0][0] == 0){
+             // Lines are matching 
+            inputCodeMirror.removeLineClass(i,"background", "highlight");
+            outputCodeMirror.removeLineClass(i,"background", "highlight");
+          }else{
+            inputCodeMirror.addLineClass(i,"background", "highlight");
+            outputCodeMirror.addLineClass(i,"background", "highlight");
+          }
+        }
+    }
+  </script>
+</body>
+
+</html>

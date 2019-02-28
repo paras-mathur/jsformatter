@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style src="../css/codemirror.css" type="text/css"></style>
+</head>
+<body>
+	
+	<button onclick="launch()" style="width: 100%;">Check</button>
+	<textarea rows="100" cols="50" id="text1" style="max-height: 80vh; padding: 0px;"></textarea>
+	<textarea rows="100" cols="50" id="text2" style="max-height: 80vh; padding: 0px;"></textarea>
+
+	<script src="../plugins/jquery.min.js"></script>
+	<script src="../plugins/codemirror.js"></script>
+	<script src="../plugins/mode/javascript.js"></script>
+	<script type="text/javascript">
+		var t1 = CodeMirror($('#text1')[0], {
+				  lineNumbers: true,
+				  placeholder: "Code goes here...",
+				  mode: "javascript",
+				  extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+				  foldGutter: true,
+				  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+				});
+		var t2 = CodeMirror($('#text2')[0], {
+				  lineNumbers: true,
+				  placeholder: "Code goes here...",
+				  mode: "javascript",
+				  extraKeys: {"Ctrl-Q": function(cm){ cm.foldCode(cm.getCursor()); }},
+				  foldGutter: true,
+				  gutters: ["CodeMirror-linenumbers", "CodeMirror-foldgutter"]
+				});
+
+		function launch(){
+			
+		}
+	</script>
+	<style type="text/css">
+		
+	</style>
+</body>
+</html>
