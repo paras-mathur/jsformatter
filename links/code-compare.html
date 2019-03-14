@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Compare code online. Easiest and cleanest way to compare text files online with this easy to use comparator tool">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="File compare, Text compare, Code Compare, JSON Compare, HTML Compare, JavaScript code compare, js file compare, difference between two text files, difference between two JavaScript files, online diff, code diff, js diff, json diff">
+    <meta name="author" content="Digital Mowgli, Paras Mathur">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <title> Text Compare | File Compare | Code Compare - Modern Approach </title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="../css/stylesheet-7afd888ba4.css">
+    <!-- endinject -->
+    <link rel="stylesheet" href="../css/themes/blackboard.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" crossorigin="anonymous">
+    <style type="text/css">
+      .nav-buttons {
+          margin: 10px;
+        }
+      .selected {
+        font-weight:bold;
+        color: #000080;
+        text-decoration: underline;
+      }
+      button {
+        border-radius: 1 !important;
+        ma
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.7.0/diff2html.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <!-- Brand -->
+        <a href="../index.html"><i class="fas fa-home" style="color: white; margin-right: 10px; "></i></a>
+        <i class="fas " style="color: white; margin-right: 10px; "> | </i>
+        <a class="navbar-brand" href="#">Code Compare</a>
+  
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+          <li class="nav-item active">
+            <button class="btn btn-success" style="margin-right: 5px " onclick="textCompare()" >
+              <i class="fa fa-code" aria-hidden="true"></i>Compare</button>
+            </button>
+          </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12" id="diff"></div>
+        </div>
+        <div class="row">
+
+           <!--  <div class="col-xs-12 col-sm-4 col-md-1" style="padding:0px">
+                <nav class="navbar bg-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link selected" href="#">String Formatter</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div> -->
+
+            <div class="col-xs-12 col-sm-6 col-md-6" style="min-height: 80vh; padding-right: 0px;" id="input-col">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6" style="min-height: 80vh; padding-left: 0px;" id="output-col">
+            </div>
+        </div>
+
+        <!-- inject:js -->
+        <script src="../js/bundle-d1c9c31c0d.js"></script>
+        <!-- endinject -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/4.0.1/diff.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/diff2html/2.7.0/diff2html.min.js"></script>
+        <script type="text/javascript">
+          function textCompare() {
+            var data1 = inputCodeMirror.getValue();
+            var data2 = outputCodeMirror.getValue();;
+
+            var diffResult = Diff.createPatch('diff', data1, data2);
+            console.log(diffResult);
+            appendDiff(diffResult);
+          }
+
+          function appendDiff(diffString) {
+            var diffHtml = Diff2Html.getPrettyHtml(
+                              diffString,
+                              {inputFormat: 'diff', showFiles: true, matching: 'lines', outputFormat: 'side-by-side'}
+                              );
+            document.getElementById("diff").innerHTML = diffHtml;
+          }
+
+        </script>
+       
+</body>
+
+</html>

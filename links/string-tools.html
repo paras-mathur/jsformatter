@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Javascript, HTML formatter online. Beautify your code and make it more readable and easy to maintain across projects. Javascript beautify/pretty print, HTML formatter online">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="JavaScript Formatter, JavaScript Formatter Online,JS Formatting online, HTML formatting online, JS beautify, Javascript beautify, JavaScript pretty print, js pretty print, js format, js formatter">
+  <meta name="author" content="Digital Mowgli, Paras Mathur">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <title> String Formatter - Modern Approach </title>
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/stylesheet-7afd888ba4.css">
+  <!-- endinject -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <style type="text/css">
+    .nav-buttons {
+    	  margin: 10px;
+    	}
+	.selected {
+		font-weight:bold;
+		color: #000080;
+		text-decoration: underline;
+	}		
+  </style>
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+     
+    <!-- Brand -->
+    <a href="../index.html"><i class="fas fa-home" style="color: white; margin-right: 10px; "></i></a>
+    <i class="fas " style="color: white; margin-right: 10px; "> | </i>
+	  <a class="navbar-brand" href="#">String Formatter</a>   
+	
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <!-- <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> 
+    </ul> -->
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <div  class="col-xs-0 col-sm-0 col-md-1" style="padding-top: 20px">
+      </div>
+	
+	    <div	class="col-xs-12 col-sm-12 col-md-10" style="padding-top: 20px">
+
+     
+    		<!-- <button type="button" class="btn btn-success" id="action-button" onclick="formatXML()">></button>
+    	  </div> -->
+
+        <div style="margin-bottom: 20px;">
+          <button class="btn btn-default btn-sm btn-success" style="border-radius: 0;font-weight: bold;" onclick="upperCase()">Upper Case</button>
+          <button class="btn btn-default btn-sm btn-success" style="border-radius: 0;font-weight: bold;" onclick="lowerCase()">Lower Case</button>
+          <button class="btn btn-default btn-sm btn-success" style="border-radius: 0;font-weight: bold;" onclick="camelCase()">Camel Case</button>
+        </div>
+        <textarea class="form-control" id="input-textarea" rows="15" style="overflow:auto;resize:none"></textarea>
+
+      </div>
+
+    <div  class="col-xs-0 col-sm-0 col-md-1" style="padding-top: 20px">
+    </div>
+
+	<!-- inject:js -->
+  <script src="../js/bundle-d1c9c31c0d.js"></script>
+  <!-- endinject -->
+
+  <script type="text/javascript">
+    _u = _.noConflict();
+
+    function upperCase(){
+      var inputText = $('#input-textarea')[0].value;
+      var formattedString = inputText.toUpperCase();
+      $('#input-textarea')[0].value = formattedString;
+    }
+
+    function lowerCase(){
+      var inputText = $('#input-textarea')[0].value;
+      var formattedString = inputText.toLowerCase();
+      $('#input-textarea')[0].value = formattedString;
+    }
+
+    function camelCase(){
+      var inputText = $('#input-textarea')[0].value;
+      var formattedString = _u.startCase(_u.camelCase(inputText));
+      $('#input-textarea')[0].value = formattedString;
+    }
+    
+  </script>
+</body>
+
+</html>

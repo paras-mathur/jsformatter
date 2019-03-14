@@ -13,8 +13,16 @@
   <!-- Place favicon.ico in the root directory -->
   <title> Javascript Formatter | JS Formatter | JS Beautify - Modern Approach </title>
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/stylesheet-e8536decdc.css">
+  <link rel="stylesheet" href="css/stylesheet-7afd888ba4.css">
   <!-- endinject -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <style type="text/css">
+	.nav-buttons {
+	  margin: 2px !important;
+    margin-right: 10px !important;
+    border-radius: 0px !important;
+	}
+  </style>
 </head>
 
 <body>
@@ -30,31 +38,31 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
     </button>
+
     <!-- Navbar links -->
-    <div class="collapse navbar-collapse" id="collapsibleNavbar">
-      <!-- <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li> 
-    </ul> -->
-    </div>
+	<div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+	  <ul class="navbar-nav">
+      <a href="links/xml-tools.html" class="btn btn-primary nav-buttons" role="button">XML Tools</a>
+    <a href="links/json-formatter.html" class="btn btn-primary nav-buttons" role="button">JSON Formatter</a>
+    <a href="links/string-tools.html" class="btn btn-primary nav-buttons" role="button">String Tools</a>
+    <a href="links/code-compare.html" class="btn btn-primary nav-buttons" role="button">Code Compare</a>
+		<li class="nav-item active">
+		  <a class="nav-link" href="https://blog.jsformatter.com">Blog</a>
+		</li>
+	  </ul>
+	</div>
   </nav>
   <div class="container-fluid">
+    <div class="row justify-content-center" style="background-color:#f3ededc7;">
+  		
+  	  </div>
     <div class="row">
       <div class="col-xs-12 col-sm-5 col-md-5" style="min-height: 80vh; padding: 0px;" id="input-col">
       </div>
       <div class="col-xs-12 col-sm-4 col-md-2 middle-col">
         <div class="buttons d-flex justify-content-center flex-column">
           <textarea id="output-textarea" style="display: none;"></textarea>
-          <button type="button" class="btn btn-warning p-2 " onclick="formatJS()">Format</button>
-          <button type="button" class="btn btn-warning p-2" onclick="formatJS()" style="display: none;">Test</button>
-
+          <button type="button" class="btn btn-warning" style="margin-right: 20px; margin-left: 20px;" onclick="formatJS()">FORMAT</button>
         </div>
       </div>
       <div class="col-xs-12 col-sm-4 col-md-5" style="min-height: 80vh; padding: 0px;" id="output-col">
@@ -151,7 +159,8 @@
   </footer>
   
   <!-- inject:js -->
-  <script src="js/bundle-7e5157a3e9.js"></script>
+  <script src="js/bundle-d1c9c31c0d.js"></script>
+  <script src="js/xml-formatter.js"></script>
   <!-- endinject -->
 
   <!-- Global site tag (gtag.js) - Google Analytics -->

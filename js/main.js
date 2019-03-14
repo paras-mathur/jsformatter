@@ -65,6 +65,25 @@ var config = {
 
 }
 
+var htmlConfig = {
+    "indent_size": 4,
+    "html": {
+        "end_with_newline": true,
+        "js": {
+            "indent_size": 2
+        },
+        "css": {
+            "indent_size": 2
+        }
+    },
+    "css": {
+        "indent_size": 1
+    },
+    "js": {
+       "preserve-newlines": true
+    }
+}
+
 var outputCodeMirror = CodeMirror($('#output-col')[0], {
   lineNumbers: true,
   placeholder: "Formatted code here...",
@@ -94,7 +113,7 @@ function formatJS() {
   var formattedCode;
 
   if (isHTML(data)) {
-    formattedCode = html_beautify(data, config);
+    formattedCode = html_beautify(data, htmlConfig);
   } else {
     formattedCode = js_beautify(data, config);
   }
