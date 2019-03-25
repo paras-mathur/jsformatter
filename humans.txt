@@ -1,9 +1,8 @@
-# humanstxt.org/
 # The humans responsible & technology colophon
 
 # TEAM
 
-    Paras MAthur -- Developer -- parasmathur9
+    Paras Mathur -- Developer -- parasmathur9
 
 # THANKS
 

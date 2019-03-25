@@ -115,7 +115,8 @@ function formatJS() {
   if (isHTML(data)) {
     formattedCode = html_beautify(data, htmlConfig);
   } else {
-    formattedCode = js_beautify(data, config);
+    //formattedCode = js_beautify(data, config);
+    prettier.format( data );
   }
 
   outputCodeMirror.setValue(formattedCode);
